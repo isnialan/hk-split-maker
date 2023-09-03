@@ -1,3 +1,27 @@
+        [Description("[DEPRECATED] Start Run (Start)"), ToolTip("Splits when autosplitter version 3 would have automatically started runs")]
+        LegacyStart,
+
+        [Description("Start New Game (Normal/Steel Soul) (Start)"), ToolTip("Splits on entry into King's Pass when starting a new game")]
+        StartNewGame,
+        [Description("Start New Godseeker Game (Start)"), ToolTip("Splits when starting a Godseeker save")]
+        StartGodhome,
+        [Description("Start Pantheon (Start)"), ToolTip("Splits when starting a Godhome save file or Pantheon run")]
+        StartPantheon,
+
+        [Description("[DEPRECATED] End Run (Ending)"), ToolTip("Splits when autosplitter version 3 would have automatically ended runs")]
+        LegacyEnd,
+
+        [Description("The Hollow Knight (Ending)"), ToolTip("Splits on The Hollow Knight ending")]
+        EndingA,
+        [Description("Sealed Siblings (Ending)"), ToolTip("Splits on Sealed Siblings ending")]
+        EndingB,
+        [Description("Dream No More (Ending)"), ToolTip("Splits on Dream No More ending")]
+        EndingC,
+        [Description("Embrace the Void (Ending)"), ToolTip("Splits on Embrace the Void ending")]
+        EndingD,
+        [Description("Delicate Flower (Ending)"), ToolTip("Splits on Delicate Flower ending")]
+        EndingE,
+
         [Description("Abyss Shriek (Skill)"), ToolTip("Splits when obtaining Abyss Shriek")]
         AbyssShriek,
         [Description("Crystal Heart (Skill)"), ToolTip("Splits when obtaining Crystal Heart")]
@@ -281,6 +305,8 @@
         EnterSoulMaster,
         [Description("Soul Master Encountered (Boss)"), ToolTip("Splits when Soul Master is activated the first time as the gate closes")]
         SoulMasterEncountered,
+        [Description("Soul Sanctum Hallownest Seal (Relic)"), ToolTip("Splits when the Hallownest Seal in Soul Sanctum is collected")]
+        SoulSanctumSeal,
         [Description("Soul Tyrant (Boss)"), ToolTip("Splits when killing Soul Tyrant")]
         SoulTyrant,
         [Description("Soul Tyrant (Essence)"), ToolTip("Splits when getting Soul Tyrant essence")]
@@ -400,6 +426,8 @@
         NoskHornetP,
         [Description("Nightmare King Grimm (Pantheon)"), ToolTip("Splits after killing Nightmare King Grimm in Pantheon 5")]
         NightmareKingGrimmP,
+        [Description("Absolute Radiance (Pantheon)"), ToolTip("Splits after killing Absolute Radiance in Pantheon 5")]
+        RadianceP,
 
         [Description("Herrah the Beast (Dreamer)"), ToolTip("Splits when you see the mask for Herrah")]
         Hegemol,
@@ -442,7 +470,7 @@
         CityGateOpen,
         [Description("City Gate w/ Mantis Lords defeated (Event)"), ToolTip("To make sure you don't forget Mantis Lords")]
         CityGateAndMantisLords,
-        [Description("Credits Roll (Event)"), ToolTip("Splits on any credits rolling")]
+        [Description("[DEPRECATED] Credits Roll (Event)"), ToolTip("Splits on any credits rolling")]
         EndingSplit,
         [Description("Death (Event)"), ToolTip("Splits when player HP is 0")]
         PlayerDeath,
@@ -478,6 +506,8 @@
         EternalOrdealAchieved,
         [Description("Riding Stag (Event)"), ToolTip("Splits while riding the stag")]
         RidingStag,
+        [Description("Stag Position Updated (Event)"), ToolTip("Splits when the stag is called")]
+        StagMoved,
         [Description("Saved Cloth (Event)"), ToolTip("Splits when saving Cloth in Ancient Basin")]
         SavedCloth,
         [Description("Crystal Peak Lift Opened (Event)"), ToolTip("Splits when opening the lever for the lift between Dirtmouth and Crystal Peak")]
@@ -668,8 +698,12 @@
 
         [Description("Has Claw (Transition)"), ToolTip("Splits on transition after Mantis Claw acquired")]
         TransClaw,
-        [Description("Has Fireball (Transition)"), ToolTip("Splits on transition after Vengeful Spirit acquired")]
+        [Description("Has Vengeful Spirit (Transition)"), ToolTip("Splits on transition after Vengeful Spirit acquired")]
         TransVS,
+        [Description("Has Shade Soul (Transition)"), ToolTip("Splits on transition after Shade Soul acquired (Room Dupe safe")]
+        TransShadeSoul,
+        [Description("Has Shade Soul TE NMMS (Transition)"), ToolTip("Splits on Spire bridge entry after Shade Soul acquired\nonly works in Ruins1_05 to Ruins1_18 in the TE NMMS dupe")]
+        TransShadeSoulTENMMS,
         [Description("Has Descending Dark (Transition)"), ToolTip("Splits on transition after Descending Dark acquired")]
         TransDescendingDark,
         [Description("Has Isma's Tear (Transition)"), ToolTip("Splits on transition after Isma's Tear acquired")]
@@ -706,6 +740,8 @@
         WaterwaysEntry,
         [Description("White Palace Entry (Transition)"), ToolTip("Splits when entering the first White Palace scene")]
         WhitePalaceEntry,
+        [Description("City Toll Bench Room (Transition)"), ToolTip("Splits when entiering the city toll bench room")]
+        EnterCityTollBenchRoom,
 
         [Description("Baldur Shell (Charm)"), ToolTip("Splits when obtaining the Baldur Shell charm")]
         BaldurShell,
@@ -1234,12 +1270,26 @@
 
         [Description("Main Menu (Menu)"), ToolTip("Splits on the main menu")]
         Menu,
-        [Description("Main Menu w/ Claw (Menu)"), ToolTip("Splits on transition to the main menu after Mantis Claw acquired")]
-        MenuClaw,
         [Description("Main Menu w/ Ghusk (Menu)"), ToolTip("Splits on transition to the main menu after Gorgeous Husk defeated")]
         MenuGorgeousHusk,
         [Description("Main Menu w/ Isma's Tear (Menu)"), ToolTip("Splits on transition to the main menu after Isma's Tear acquired")]
         MenuIsmasTear,
+        [Description("Main Menu w/ Claw (Menu)"), ToolTip("Splits on transition to the main menu after Mantis Claw acquired")]
+        MenuClaw,
+
+        [Description("Main Menu w/ Mothwing Cloak (Menu)"), ToolTip("Splits on transition to the main menu after Mothwing Cloak acquired")]
+        MenuCloak,
+        [Description("Main Menu w/ Dashmaster (Menu)"), ToolTip("Splits on transition to the main menu after Dashmaster acquired")]
+        MenuDashmaster,
+        [Description("Main Menu w/ Dream Nail (Menu)"), ToolTip("Splits on transition to the main menu after Dream Nail acquired")]
+        MenuDreamNail,
+        [Description("Main Menu w/ Dream Gate (Menu)"), ToolTip("Splits on transition to the main menu after Dream Gate acquired")]
+        MenuDreamGate,
+
+        [Description("Main Menu w/ Void Heart (Menu)"), ToolTip("Splits on transition to the main menu after Void Heart acquired")]
+        MenuVoidHeart,
+        [Description("Main Menu w/ 3 Dreamers (Menu)"), ToolTip("Splits on transition to the main menu after 3 Dreamers acquired")]
+        MenuDreamer3,
 
         [Description("Cornifer at Home (Transition)"), ToolTip("Splits when entering Iselda's hut while Cornifer is sleeping")]
         CorniferAtHome,

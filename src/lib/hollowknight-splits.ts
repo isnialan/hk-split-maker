@@ -94,6 +94,7 @@ function getNameAndGroup({
     case "Pantheon1to4Entry":
     case "Pantheon5Entry":
     case "WaterwaysEntry":
+    case "EnterCityTollBenchRoom":
       return [`Enter ${name}`, qualifier];
     case "QueensGardensEntry":
       return ["Enter Queen's Gardens", qualifier];
@@ -124,6 +125,10 @@ function getNameAndGroup({
       return ["Mantis Claw Exit", qualifier];
     case "TransVS":
       return ["Vengeful Spirit Exit", qualifier];
+    case "TransShadeSoul":
+      return ["Shade Soul Exit", qualifier];
+    case "TransShadeSoulTENMMS":
+      return ["Shade Soul Exit (TE NMMS)", qualifier];
     case "TransTear":
       return ["Isma's Tear Exit", qualifier];
     case "ElderHuTrans":

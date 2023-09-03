@@ -150,6 +150,10 @@ function getUrl(id, qualifier) {
         return getUrl("SoulMaster", "Boss");
       case "UumuuEncountered":
         return getUrl("Uumuu", "Boss");
+      case "HollowKnightBoss":
+        return getUrl("HollowKnight", "Boss");
+      case "RadianceBoss":
+        return getUrl("Radiance", "Boss");
     }
   }
 
@@ -282,7 +286,7 @@ function getUrl(id, qualifier) {
       case "NightmareLanternDestroyed":
         return getUrl("Banishment", "Achievement");
       case "HollowKnightDreamnail":
-        return getUrl("HollowKnightBoss", "Boss");
+        return getUrl("HollowKnight", "Boss");
       case "SeerDeparts":
         return getUrl("Ascension", "Achievement");
       case "SpiritGladeOpen":
@@ -320,6 +324,8 @@ function getUrl(id, qualifier) {
         return getUrl("PureSnail", "Misc");
       case "OnGhostCoinsIncremented":
         return getUrl("Knight", "Misc");
+      case "StagMoved":
+        return getUrl("Stag", "Misc");
     }
   }
 
@@ -498,6 +504,9 @@ function getUrl(id, qualifier) {
         return getUrl("DescendingDark", "Skill");
       case "TransVS":
         return getUrl("VengefulSpirit", "Skill");
+      case "TransShadeSoul":
+      case "TransShadeSoulTENMMS":
+        return getUrl("ShadeSoul", "Skill");
       case "TransTear":
       case "TransTearWithGrub":
         return getUrl("IsmasTear", "Skill");
@@ -567,6 +576,8 @@ function getUrl(id, qualifier) {
         return getUrl("ManualSplit", "Misc");
       case "SalubraExit":
         return getUrl("SalubrasBlessing", "Item");
+      case "EnterCityTollBenchRoom":
+        return getUrl("Bench", "Misc");
     }
   }
 
@@ -580,6 +591,18 @@ function getUrl(id, qualifier) {
         return getUrl("GorgeousHusk", "Enemy");
       case "MenuIsmasTear":
         return getUrl("IsmasTear", "Skill");
+      case "MenuCloak":
+        return getUrl("MothwingCloak", "Skill");
+      case "MenuDashmaster":
+        return getUrl("Dashmaster", "Charm");
+      case "MenuDreamNail":
+        return getUrl("DreamNail", "Skill");
+      case "MenuDreamGate":
+        return getUrl("DreamGate", "Skill");
+      case "MenuVoidHeart":
+        return getUrl("VoidHeart", "Charm");
+      case "MenuDreamer3":
+        return getUrl("Dreamer", "Dreamer");
     }
   }
 
@@ -650,6 +673,36 @@ function getUrl(id, qualifier) {
   if (qualifier === "Other") {
     return getUrl("ManualSplit", "Misc");
   }
+
+  if (qualifier === "Start") {
+    return getUrl("ManualSplit", "Misc");
+  }
+
+  if (qualifier === "Ending") {
+    switch (id) {
+      case "EndingA":
+        return getUrl("HollowKnight", "Boss");
+      case "EndingB":
+        return getUrl("HollowKnight", "Boss");
+      case "EndingC":
+        return getUrl("Radiance", "Boss");
+      case "EndingD":
+        return getUrl("Radiance", "Boss");
+      case "EndingE":
+        return getUrl("Radiance", "Boss");
+      case "LegacyEnd":
+        return getUrl("ManualSplit", "Misc");
+    }
+  }
+
+  // TODO: Delete once source is changed to (Item)
+  if (qualifier === "Relic") {
+    switch (id) {
+      case "SoulSanctumSeal":
+        return getUrl("HallownestSeal", "Relic");
+    }
+  }
+
   const newId = NEW_ID_MAP[id] || id;
   return `./${qualifier}/${newId}.png`;
 }
